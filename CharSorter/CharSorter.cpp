@@ -10,11 +10,11 @@ int main()
 	std::string input;
 	std::cin >> input;
 	int charCount[26] = { 0 };
+	int a = (int)'a';
 
 	for (int i = 0; i < input.length(); i++)
 	{
 		int current = (int)input[i];
-		int a = (int)'a';
 		charCount[current - a]++;
 	}
 
@@ -22,7 +22,10 @@ int main()
 
 	for (int i = 0; i < 26; i++)
 	{
-
+		for (int j = 0; j < charCount[i]; j++)
+		{
+			std::cout << (char)(i + a);
+		}
 	}
 }
 
