@@ -7,13 +7,22 @@
 
 int main()
 {
-	std::string in;
-	std::cin >> in;
+	std::string input;
+	std::cin >> input;
 	int charCount[26] = { 0 };
 
-	for (int i = 0; i < in.length(); i++)
+	for (int i = 0; i < input.length(); i++)
 	{
-		std::cout << charCount[i];
+		int current = (int)input[i];
+		int a = (int)'a';
+		charCount[current - a]++;
+	}
+
+	std::cout << std::endl << "is:" << std::endl;
+
+	for (int i = 0; i < 26; i++)
+	{
+
 	}
 }
 
