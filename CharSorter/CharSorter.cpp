@@ -3,10 +3,18 @@
 
 #include "pch.h"
 #include <iostream>
+#include<string>
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	std::string in;
+	std::cin >> in;
+	int charCount[26] = { 0 };
+
+	for (int i = 0; i < in.length(); i++)
+	{
+		std::cout << charCount[i];
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
